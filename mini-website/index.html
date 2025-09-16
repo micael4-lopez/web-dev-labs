@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Travel in the Philippines — Best Islands</title>
+  <meta name="description" content="Explore the best islands in the Philippines: Palawan, Boracay, Siargao, Cebu, Bohol and more. Island guides, galleries, tips and contact." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container">
+      <h1 class="logo">Travel in the Philippines</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pages/palawan.html">Palawan</a></li>
+          <li><a href="pages/boracay.html">Boracay</a></li>
+          <li><a href="pages/siargao.html">Siargao</a></li>
+          <li><a href="pages/cebu.html">Cebu</a></li>
+          <li><a href="pages/credits.html">Credits</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container" role="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <h2 id="hero-title">Discover the Philippines' Best Islands</h2>
+      <p>
+        The Philippines is an archipelago of 7,641 islands — each with unique beaches, reefs and culture.
+        This site highlights top islands that travellers love: Palawan (El Nido & Coron), Boracay (White Beach),
+        Siargao (Cloud 9 surf), Cebu, Bohol and more. Use the cards below to jump to a detailed island guide,
+        photo gallery, and suggested activities.
+      </p>
+    </section>
+
+    <section class="features" aria-labelledby="featured-title">
+      <h3 id="featured-title">Featured islands</h3>
+      <div class="grid">
+        <article class="card">
+          <img src="images/palawan-01.jpg" alt="Limestone karsts and clear water in El Nido, Palawan" />
+          <h4>Palawan</h4>
+          <p>Explore dramatic limestone cliffs, hidden lagoons and world-class snorkeling in El Nido and Coron.</p>
+          <a class="btn" href="pages/palawan.html">Read Palawan guide</a>
+        </article>
+
+        <article class="card">
+          <img src="images/boracay-01.jpg" alt="White Beach, Boracay at sunset" />
+          <h4>Boracay</h4>
+          <p>Famous for its white sand beaches and lively island vibe — great for sunbathing and water sports.</p>
+          <a class="btn" href="pages/boracay.html">Read Boracay guide</a>
+        </article>
+
+        <article class="card">
+          <img src="images/siargao-01.jpg" alt="Surfer on Cloud 9 wave, Siargao" />
+          <h4>Siargao</h4>
+          <p>Surfing capital—Cloud 9 is the iconic spot. Also great for island hopping and lagoons.</p>
+          <a class="btn" href="pages/siargao.html">Read Siargao guide</a>
+        </article>
+
+        <!-- add more cards for Cebu, Bohol, Coron, etc. -->
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-title">
+      <h3 id="contact-title">Contact & Feedback</h3>
+      <form id="contact-form" action="#" method="post" novalidate>
+        <label>
+          Name
+          <input type="text" name="name" required />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="4" required></textarea>
+        </label>
+        <button type="submit" class="btn">Send (no backend)</button>
+      </form>
+    </section>
+
+    <section class="faq" aria-labelledby="faq-title">
+      <h3 id="faq-title">FAQ</h3>
+      <div class="faq-item">
+        <button class="faq-toggle" aria-expanded="false">When is the best time to visit?</button>
+        <div class="faq-content" hidden>
+          <p>It varies by island; generally dry season (Nov–Apr) is safest for beach plans.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Travel in the Philippines — <a href="pages/credits.html">Credits</a></p>
+      <a class="back-to-top" href="#main" aria-label="Back to top" id="backToTop">↑</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
