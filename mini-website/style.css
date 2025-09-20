@@ -1,42 +1,269 @@
-:root{
-  --accent:#0b6e4f;
-  --bg:#ffffff;
-  --muted:#666;
-  --maxWidth:1100px;
-  --radius:12px;
-  --gap:1rem;
-  font-size:16px;
-  color-scheme: light;
+/* ===== Base Styles ===== */
+:root {
+  --primary: #0077b6;    /* ocean blue */
+  --secondary: #ffb703;  /* sunset yellow */
+  --text: #222;
+  --muted: #555;
+  --bg: #ffffff;
+  --radius: 12px;
+  --maxWidth: 1100px;
 }
 
-*{box-sizing:border-box}
-body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial; margin:0; line-height:1.5; color:#111; background:var(--bg)}
-.container{max-width:var(--maxWidth); margin:0 auto; padding:1rem}
-.site-header{background:#fff; border-bottom:1px solid #eee; position:sticky; top:0; z-index:50}
-.site-header .container{display:flex; gap:1rem; align-items:center; justify-content:space-between}
-.logo{margin:0; font-size:1.25rem}
-.main-nav ul{list-style:none; margin:0; padding:0; display:flex; gap:.75rem}
-.main-nav a{display:inline-block; padding:.5rem .6rem; text-decoration:none; color:var(--muted)}
-.main-nav a:hover, .main-nav a[aria-current="page"]{color:var(--accent); font-weight:600}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-.hero{padding:1rem 0}
-.hero h2{margin:0 0 .5rem}
-.grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:1rem}
-.card{background:#fff; border-radius:var(--radius); padding:.75rem; box-shadow:0 6px 18px rgba(0,0,0,.06)}
-.card img{width:100%; height:150px; object-fit:cover; border-radius:8px}
-.card h4{margin:.5rem 0}
-.btn{display:inline-block; background:var(--accent); color:#fff; padding:.45rem .7rem; text-decoration:none; border-radius:8px}
+body {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  background: var(--bg);
+  color: var(--text);
+}
 
-.site-footer{border-top:1px solid #eee; padding:1rem 0; margin-top:2rem}
-.back-to-top{position:fixed; right:12px; bottom:12px; display:none; background:#111; color:#fff; padding:.5rem .6rem; border-radius:8px; text-decoration:none}
+/* ===== Layout ===== */
+.container {
+  max-width: var(--maxWidth);
+  margin: 0 auto;
+  padding: 1rem;
+}
 
-/* FAQ */
-.faq-item{margin-bottom:.5rem}
-.faq-toggle{background:#f5f5f5; width:100%; text-align:left; padding:.5rem; border:0; border-radius:8px}
-.faq-content{padding:.5rem 1rem; background:#fff}
+/* ===== Header & Navigation ===== */
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
 
-/* Responsive tweaks */
-@media (max-width:640px){
-  .site-header .container{flex-direction:column; align-items:flex-start}
-  .card img{height:140px}
+.site-header .container {
+  display: flex;
+  flex-direction: column;   /* stack logo & nav */
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #fff;
+  background: var(--primary);
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  transition: background 0.2s;
+}
+
+.main-nav a:hover,
+.main-nav a[aria-current="page"] {
+  background: var(--secondary);
+  color: #000;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url("../images/palawan-01.jpg") center/cover no-repeat;
+  color: #fff;
+  border-radius: var(--radius);
+  margin-bottom: 2rem;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* ===== Island Cards ===== */
+.features h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+  color: var(--primary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.card h4 {
+  margin: 0.75rem;
+  color: var(--primary);
+}
+
+.card p {
+  margin: 0 0.75rem 1rem;
+  color: var(--muted);
+}
+
+.card .btn {
+  display: inline-block;
+  margin: 0 0.75rem 1rem;
+  padding: 0.6rem 1rem;
+  background: var(--secondary);
+  color: #000;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.card .btn:hover {
+  background: #f4a300;
+}
+
+/* ===== Contact Form ===== */
+#contact {
+  margin-top: 2rem;
+}
+
+#contact h3 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.25rem;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+}
+
+form button {
+  display: inline-block;
+  margin-top: 0.5rem;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+form button:hover {
+  background: var(--secondary);
+  color: #000;
+}
+
+/* ===== FAQ ===== */
+.faq {
+  margin-top: 2rem;
+}
+
+.faq h3 {
+  margin-bottom: 1rem;
+  color: var(--primary);
+  text-align: center;
+}
+
+.faq-toggle {
+  width: 100%;
+  padding: 0.75rem;
+  text-align: left;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.faq-toggle:hover {
+  background: var(--secondary);
+  color: #000;
+}
+
+.faq-content {
+  padding: 0.75rem 1rem;
+  background: #fff;
+  border-left: 4px solid var(--primary);
+  margin-top: 0.5rem;
+  border-radius: 0 6px 6px 6px;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  border-top: 1px solid #eee;
+  padding: 1rem;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.back-to-top {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  background: var(--primary);
+  color: #fff;
+  padding: 0.6rem 0.8rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  display: none;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.back-to-top:hover {
+  background: var(--secondary);
+  color: #000;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 640px) {
+  .hero h2 {
+    font-size: 1.5rem;
+  }
 }
