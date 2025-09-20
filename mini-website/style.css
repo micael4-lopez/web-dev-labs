@@ -241,6 +241,55 @@ form button:hover {
   }
 }
 
+/* ===== Header & Navigation ===== */
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.site-header .container {
+  display: flex;
+  flex-direction: column;   /* stack logo and nav */
+  align-items: center;      /* center horizontally */
+  padding: 1rem 0;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;          /* so buttons wrap on small screens */
+  justify-content: center;  /* center the nav items */
+  padding: 0;
+  margin: 0;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--muted);
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.main-nav a:hover,
+.main-nav a[aria-current="page"] {
+  background: var(--primary);
+  color: #fff;
+}
+
+
 :root{
   --accent:#0b6e4f;
   --bg:#ffffff;
