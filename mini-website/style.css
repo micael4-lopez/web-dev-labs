@@ -273,3 +273,11 @@ figcaption {
   max-width: 800px;
   margin: 0.5rem auto 1rem auto;
 }
+
+figure figcaption {
+  font-size: 0.95rem;
+  color: #444;
+  text-align: justify;     /* pantay kaliwa at kanan */
+  line-height: 1.6;
+  margin-top: 0.5rem;
+}
