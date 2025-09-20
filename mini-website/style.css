@@ -29,7 +29,6 @@ body {
   padding: 1rem;
 }
 
-
 /* ===== Header & Navigation ===== */
 .site-header {
   background: #fff;
@@ -145,7 +144,7 @@ body {
   background: #e68900;
 }
 
-
+/* ===== Contact Form ===== */
 #contact {
   margin-top: 2rem;
 }
@@ -181,6 +180,7 @@ form button {
 form button:hover {
   background: #e68900;
 }
+
 
 .faq h3 {
   margin: 2rem 0 1rem;
@@ -237,4 +237,39 @@ form button:hover {
   .hero h2 {
     font-size: 1.5rem;
   }
+}
+
+/* ===== Standardized Images for All Pages ===== */
+img {
+  width: 900%;              /* palaging sakop ang lapad ng container */
+  max-width: 900px;         /* para hindi lumampas */
+  height: 500px;            /* standardized height (pare-pareho lahat) */
+  object-fit: cover;        /* crop para hindi ma-distort */
+  border-radius: 8px;
+  display: block;
+  margin: 1rem auto;        /* center sa page */
+}
+
+/* Standard style for image captions and descriptions */
+figcaption {
+  font-size: 0.95rem;
+  color: #444;
+  text-align: justify;   /* pantay kaliwa at kanan */
+  margin-top: 0.5rem;
+  line-height: 1.5;
+  width: 100%;           /* sakop ang buong lapad */
+  max-width: 800px;      /* para hindi sobrang haba sa malalaking screen */
+  margin-left: auto;     /* center horizontally */
+  margin-right: auto;
+}
+
+/* If you also use <p> directly under an image */
+.image-desc {
+  font-size: 0.95rem;
+  color: #444;
+  text-align: justify;
+  line-height: 1.5;
+  width: 100%;
+  max-width: 800px;
+  margin: 0.5rem auto 1rem auto;
 }
