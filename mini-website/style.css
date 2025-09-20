@@ -36,12 +36,14 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
+
 }
 
 .site-header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
 }
 
 .logo {
@@ -241,13 +243,13 @@ form button:hover {
 
 /* ===== Standardized Images for All Pages ===== */
 img {
-  width: 100%;              /* palaging sakop ang lapad ng container */
+  width: 150%;              /* palaging sakop ang lapad ng container */
   max-width: 900px;         /* para hindi lumampas */
   height: 500px;            /* standardized height (pare-pareho lahat) */
   object-fit: cover;        /* crop para hindi ma-distort */
   border-radius: 8px;
   display: block;
-  margin: auto;     /* center sa page */
+  margin: 1rem auto;        /* center sa page */
 }
 
 /* Standard style for image captions and descriptions */
