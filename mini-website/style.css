@@ -141,10 +141,10 @@ body {
 }
 
 .card .btn:hover {
-  background: #e68900;
+  background: #00796b;
 }
 
-/* ===== Contact Form ===== */
+
 #contact {
   margin-top: 2rem;
 }
@@ -181,7 +181,6 @@ form button:hover {
   background: #e68900;
 }
 
-/* ===== FAQ ===== */
 .faq h3 {
   margin: 2rem 0 1rem;
   color: var(--primary);
@@ -206,7 +205,6 @@ form button:hover {
   border-radius: 0 6px 6px 6px;
 }
 
-/* ===== Footer ===== */
 .site-footer {
   border-top: 1px solid #eee;
   padding: 1rem;
@@ -229,7 +227,6 @@ form button:hover {
   text-decoration: none;
 }
 
-/* ===== Responsive ===== */
 @media (max-width: 640px) {
   .site-header .container {
     flex-direction: column;
