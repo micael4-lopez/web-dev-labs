@@ -243,7 +243,7 @@ form button:hover {
 img {
   width: 150%;              /* palaging sakop ang lapad ng container */
   max-width: 900px;         /* para hindi lumampas */
-  height: 250px;            /* standardized height (pare-pareho lahat) */
+  height: 300px;            /* standardized height (pare-pareho lahat) */
   object-fit: cover;        /* crop para hindi ma-distort */
   border-radius: 8px;
   display: block;
