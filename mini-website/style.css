@@ -1,7 +1,7 @@
 /* ===== Base Styles ===== */
 :root {
-  --primary: #00796b;     /* teal accent */
-  --secondary: #ff9800;   /* warm orange accent */
+  --primary: #00796b;     
+  --secondary:  #00796b; 
   --bg: #ffffff;
   --text: #222;
   --muted: #666;
