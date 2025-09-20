@@ -24,9 +24,9 @@ body {
 
 /* ===== Layout Containers ===== */
 .container {
-  max-width: var(--maxWidth);
-  margin: 0 auto;
-  padding: 1rem;
+  max-width: 1400px;
+  margin: auto;
+  padding: 0 2rem;
 }
 
 /* ===== Header & Navigation ===== */
@@ -83,6 +83,7 @@ body {
   color: #fff;
   border-radius: var(--radius);
   margin-bottom: 2rem;
+  max-width: none;
 }
 
 .hero h2 {
@@ -110,6 +111,8 @@ body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   overflow: hidden;
   transition: transform 0.2s;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 .card:hover {
@@ -140,8 +143,9 @@ body {
   color: #fff;
   border-radius: 6px;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 1rem;
   transition: background 0.2s;
+  text-align: center;
 }
 
 .card .btn:hover {
