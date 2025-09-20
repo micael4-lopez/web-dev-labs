@@ -247,7 +247,7 @@ img {
   object-fit: cover;        /* crop para hindi ma-distort */
   border-radius: 8px;
   display: block;
-  margin: 1rem auto;        /* center sa page */
+  margin: auto;     /* center sa page */
 }
 
 /* Standard style for image captions and descriptions */
